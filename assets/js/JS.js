@@ -13,12 +13,13 @@ $(function(){
     
     $('.header .btn-menu').click(function(){
         $('.side-nav').addClass('on')
+        $('body').addClass('hidden')
 
     })
 
     $('.side-nav .close').click(function(){
         $('.side-nav').removeClass('on')
-
+        $('body').removeClass('hidden')
     })
 
 
