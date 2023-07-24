@@ -703,3 +703,6 @@ header .btn-menu{
     overflow: hidden;
 }
 
+.hide{
+    top: -95px;
+}

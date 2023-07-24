@@ -1,14 +1,21 @@
 $(function(){
+    
+    let lastScroll = 0;
 
+    $(window).scroll(function(){
 
+                
+        curr = $(this).scrollTop();
 
-    // $('.gnb-item').hover(function(){
+        if (curr > lastScroll) {
+            $('header').addClass('hide')
+            
+        } else {
+            $('header').removeClass('hide')
+        }
+        lastScroll = curr;
 
-    //     $(this).closest('header').addClass('on')
-    // },function(){
-    //     $('.header').removeClass('on')
-
-    // })
+    })
 
     
     $('.header .btn-menu').click(function(){
@@ -60,24 +67,9 @@ $(function(){
           el: ".swiper-pagination",
         },
         loop: true,
-        // autoplay: {
-        //     delay: 4000,
-        //     disableOnInteraction: false,
-        //   },
       });
 
 
-    // var swiper = new Swiper(".marquee-slide", {
-    //     speed:2000,
-    //     slidesPerView:"auto",
-    //     spaceBetween:8,
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 0,
-    //         disableOnInteraction: false,
-    //     },
-        
-    //   });
 
     //   제이쿼리 비디오 정지
     $('.sc-vision .video-area .btn-control').click(function(){
@@ -96,28 +88,8 @@ $(function(){
  
     $('.footer .btn').click(function(e){
 
-
-
         $('.footer .site-area').toggleClass('on');
 
-        // if(!$(this).hasClass('none')){ //내가 선택한 애가 none이라는 클레스가 없냐?
-        //     e.preventDefault(); //링크이벤트막기
-
-        //     // if($(this).hasClass('active')){ //클릭한게 active있냐>(또클릭)
-
-        //     //     $('.footer .btn').removeClass('active'); //모든버튼 클레스다빼고
-        //     //     $('.select').slideUp(); //모든 sub닫기
-
-        //     // }else{ //active없냐? (첫클릭 )
-
-        //     //     $('.footer .btn').removeClass('active');//모든버튼 클레스다빼고
-        //     //     $(this).addClass('active'); //나만(btn-related)클레스 주기
-
-        //     //     $('.select').slideUp(); //모든 sub닫고
-        //     //     $(this).siblings('.select').slideDown(); //나만(btn-related)의 형제 .sub 열기
-        //     // }
-
-        // }
     })
 
 })
