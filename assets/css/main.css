@@ -7,11 +7,8 @@
 
 
 .sc-visual{
-    height: calc(100vh - 95px);
-    /* overflow: hidden;
-    margin-top: 95px;
-    position: relative;
-    max-width: 100%; */
+    transform: translateY(-95px);
+    height: 100vh;
 }
 .sc-visual .swiper{
     position: relative;
@@ -53,6 +50,7 @@
 
 .sc-visual .img-box video{
     pointer-events: none;
+    height: 100%;
 }
 .sc-visual .swiper-slide .text-box{}
 
@@ -244,6 +242,11 @@
     height: 245px;
     transition: 0.3s;
 }
+
+.sc-story .mobile{
+    display: none;
+}
+
 .sc-vision{
     padding-top: 160px;
 }
@@ -278,8 +281,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     transform: translate(-50%, -50%);
     opacity: 0;
 }
@@ -289,10 +292,28 @@
 }
 
 .sc-vision .video-area .btn-play{
+<<<<<<< HEAD
+=======
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+>>>>>>> f834f3e46786d167c9150d5e4140476ad195258a
     display: none;
 }
 
 .sc-vision .video-area .btn-pause{
+<<<<<<< HEAD
+=======
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+>>>>>>> f834f3e46786d167c9150d5e4140476ad195258a
     display: none;
 }
 
@@ -335,6 +356,10 @@
     display: none;
    }
 
+.sc-vision .mobile{
+    display: none;
+}
+
 
 
 .sc-green{
@@ -343,7 +368,7 @@
 .sc-green .bg{
     display: block;
     background-image: url(../img/season.jpg);
-    min-height: 100%;
+    height: 680px;
     background-attachment: fixed;
     background-position: 50% 50%;
     background-size: cover;
@@ -409,6 +434,8 @@
     width: 200px;
     height: 160px;
     margin-right: 40px;
+    border: 1px solid rgba(0,0,0,.1);
+
 
 }
 
@@ -416,7 +443,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: 1px solid rgba(0,0,0,.1);
     transition: 0.3s;
 }
 
@@ -436,8 +462,8 @@
     font-weight: 700;
     text-overflow: ellipsis;
     overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    white-space: nowrap;
+
 }
 .sc-news .news-item .text-box p{
     margin-bottom: 10px;
@@ -445,8 +471,7 @@
     line-height: 1.625;
     text-overflow: ellipsis;
     overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    white-space: nowrap;
 
 }
 .sc-news .news-item .text-box em{
@@ -661,6 +686,10 @@
        }
 
 
+
+       .sc-news h2{
+        font-size: 30px;
+       }
             
         .sc-news .news-list{
             max-width: 820px;
@@ -673,9 +702,7 @@
             padding: 40px 20px;
         }
 
-        .sc-news .news-item a{
-            display: block;
-        }
+    
         .sc-news .news-item:hover img{
             transform: scale(1.1);
         }
@@ -687,15 +714,7 @@
 
         }
 
-        .sc-news .news-item .img-box img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: 1px solid rgba(0,0,0,.1);
-            transition: 0.3s;
-        }
-
-
+  
         .sc-news .news-item .text-box{
             flex: 1;
             overflow: hidden;
@@ -703,37 +722,87 @@
 
 
         .sc-news .news-item .text-box strong{
-            display: block;
-            max-height: 52px;
-            margin-bottom: 5px;
             font-size: 16px;
-            line-height: 1.625;
-            font-weight: 700;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
+            margin-bottom: 5px;
         }
+       
         .sc-news .news-item .text-box p{
             margin-bottom: 8px;
-            max-height: 52px;
-            line-height: 1.625;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-
         }
         .sc-news .news-item .text-box em{
-            color: #a6a7a9;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 1.7142857143;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
+            font-size: 12px;
         }
 
     
+}
+
+@media (max-width:500px) {
+
+
+    .sc-visual .text-box em{
+    font-size: 22px;
+    }
+    .sc-visual .text-box h2{
+    font-size: 58px;
+    }
+    .sc-visual .text-box .link{
+    font-size: 22px;
+    }
+    
+    .sc-vision{
+        padding: 120px 0 ;
+    }
+
+    .sc-visual .main-slide{
+        height: 115vh;
+    }
+
+    .sc-vision .desc p{
+        margin: 0;
+    }
+
+    .sc-green .bg{
+        padding: 100px 24px;
+
+    }
+
+    .sc-font h2{
+        font-size: 30px;
+    }
+
+    
+}
+
+
+@media (max-width:320px) {
+
+    
+    .sc-visual .text-box em{
+    font-size: 18px;
+    }
+    .sc-visual .text-box h2{
+    font-size: 40px;
+    }
+    .sc-visual .text-box .link{
+    font-size: 18px;
+    }
+
+  .sc-story .mobile{
+    display: block;
+  }
+
+  .sc-vision .pc{
+    display: block;
+  }
+
+  .sc-vision .mobile{
+    display: block;
+  }
+
+  .sc-font .headline-area h2{
+    font-size: 30px;
+  }
+
+
+
 }

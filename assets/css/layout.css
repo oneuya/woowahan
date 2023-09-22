@@ -532,6 +532,7 @@ header .btn-menu{
         line-height: 1.75;
         letter-spacing: -.02em;
         display: none;
+        pointer-events: none;
 
     }
 
@@ -702,3 +703,9 @@ header .btn-menu{
     overflow: hidden;
 }
 
+<<<<<<< HEAD
+=======
+.hide{
+    top: -95px;
+}
+>>>>>>> f834f3e46786d167c9150d5e4140476ad195258a
