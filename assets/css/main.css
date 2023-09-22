@@ -1,6 +1,11 @@
 
 
 
+.main{
+    padding-top: 95px;
+}
+
+
 .sc-visual{
     height: calc(100vh - 95px);
     /* overflow: hidden;
@@ -30,13 +35,19 @@
 .sc-visual .img-box img{ max-width: none; object-fit: cover; width: 120%; height: 100%; }
 
 /* motion1 */
-.sc-visual .motion1.swiper-slide-active .img-box img{ transform: translateX(-10%); transition: 5s; }
+.sc-visual .motion1.swiper-slide-active .img-box img{ 
+    transform: translateX(-10%); transition: 5s; 
+}
 /* motion2 */
 .sc-visual .motion2 .img-box a{ display: flex; justify-content: flex-end; }
-.sc-visual .motion2.swiper-slide-active .img-box img{ transform: translateX(10%); transition: 5s; }
+.sc-visual .motion2.swiper-slide-active .img-box img{ 
+    transform: translateX(10%); transition: 5s; 
+}
 /* motion3 */
 .sc-visual .motion3 .img-box img{ width: 100%; height: 120%; }
-.sc-visual .motion3.swiper-slide-active .img-box img{ transform: translateY(-10%); transition: 5s; }
+.sc-visual .motion3.swiper-slide-active .img-box img{ 
+    transform: translateY(-10%); transition: 5s; 
+}
 
 
 
@@ -278,22 +289,10 @@
 }
 
 .sc-vision .video-area .btn-play{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
     display: none;
 }
 
 .sc-vision .video-area .btn-pause{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
     display: none;
 }
 
@@ -606,6 +605,25 @@
 }
 
 @media (max-width:750px) {
+
+    .sc-visual{
+        height: 100%;
+    }
+
+    .sc-visual .main-slide{
+        height: 110vh;
+    }
+
+    .sc-visual .text-box em{
+        font-size: 27px;
+    }
+    .sc-visual .text-box h2{
+        font-size: 70px;
+        margin-bottom: 50px;
+    }
+    .sc-visual .text-box .link{
+        font-size: 23px;
+    }
 
     .sc-story{
         padding-top: 120px;

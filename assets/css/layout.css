@@ -2,11 +2,6 @@
 @import './reset.css';
 @import './common.css';
 
-
-.main{
-    padding-top: 95px;
-}
-
 .header{
     position: fixed;
     top: 0;
@@ -201,6 +196,11 @@
 }
 
 
+header .btn-menu{
+    display: none;
+}
+
+
 
 
 
@@ -221,15 +221,18 @@
     margin: 0 auto;
     padding: 0 7px;
 }
+
+
 .footer .category{
     display: flex;
-    justify-content: center;
-
+    justify-content: space-between;
+    flex-wrap: wrap;
 
 }
-.footer .cate-list{
-    flex: 1;
+
+.footer .cate-inner{
 }
+
 .footer .cate-list .title{
     line-height: 1.75;
     font-weight: bold;
@@ -237,25 +240,20 @@
 .footer .cate-item a{
     display: block;
     margin-top: 8px;
-    padding-right: 8px;
     line-height: 1.4;
     color: #6c6d6f;
     font-size: 14px;
 }
-.footer .cate-ather{
-    flex: 1;
-
-}
-
-.footer .cate-ather p{
+.footer .cate-other p{
+    padding-right: 20px;
+    font-weight: bold;  
     margin-bottom: 8px;
-    font-weight: bold;
 }
 
 .footer .cate-info{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    width: 120px;
 }
 
 
@@ -265,6 +263,11 @@
     line-height: 1.4;
     color: #6c6d6f;
     font-size: 14px;
+    width: 100%;
+}
+
+.footer .info-item.public{
+    font-weight: bold;
 }
 
 .footer .cate-info .ccm::before{
@@ -280,17 +283,18 @@
 }
 
 .footer .bottom-area{
+    position: relative;
     display: flex;
+    gap: 33px;
     justify-content: space-between;
-    margin-top: 28px;
-    gap: 50px;
-    min-width: 280px;
     align-items: end;
+    margin-top: 28px;
 }
 
 .footer .add-area{
     flex: 1;
 }
+
 .footer .add-area p{
     font-weight: 700;
     line-height: 1.75;
@@ -312,10 +316,10 @@
 
 
 .footer .site-area{
-    width: 327px;
     position: relative;
 }
 .footer .site-area .btn{
+    width: 327px;
     font-size: 14px;
     text-align: left;
     display: -webkit-box;
@@ -324,7 +328,6 @@
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    width: 100%;
     min-height: 50px;
     padding: 13px 16px;
     -webkit-box-sizing: border-box;
@@ -339,8 +342,8 @@
     position: absolute;
     bottom: 100%;
     left: 0;
-    overflow: auto;
     width: 100%;
+    overflow: auto;
     max-height: 215px;
     margin-bottom: 4px;
     box-sizing: border-box;
@@ -366,24 +369,8 @@
 }
 
 
-/* 
-
-.footer .site-area .btn.active  */
-
-
-.footer .site-area .select::-webkit-scrollbar{
-    width: 5px;
-    height: 5px;
-}
-.footer .site-area .select::-webkit-scrollbar-thumb{
-    border-radius: 2.5px;
-    background-color: rgba(0,0,0,.15);
-}
-.footer .site-area .select::-webkit-scrollbar-track{
-    background-color: transparent;
-}
-
 .footer .site-area .option{
+    width: 100%;
 }
 
 
@@ -397,14 +384,21 @@
     font-size: 14px;
 }
 
-
-header .btn-menu{
+.footer .mobile{
     display: none;
+
 }
+
+
 
 .side-nav{
     display: none;
 }
+
+
+
+
+
 
 @media (max-width:1040px) {
     .header .family-area{
@@ -430,10 +424,13 @@ header .btn-menu{
         display: block;
     }
 
+    
+
     .side-nav{
         display: flex;
         flex-direction: column;
         position: fixed;
+        overflow-y:auto;
         top: 0;
         right: -100%;
         background: #fff;
@@ -487,8 +484,13 @@ header .btn-menu{
         line-height: 1.75;
         letter-spacing: -.02em;
         color: #232324;
+        pointer-events: none;
         
         
+    }
+
+    .side-nav .menu-item .menu-headline .other{
+        pointer-events: all;
     }
     
 
@@ -526,7 +528,6 @@ header .btn-menu{
     .side-nav .menu-item .sub-list{
         max-height: 250px;
         color: #6c6d6f;
-        overflow: hidden;
         margin-left: 24px;  
         line-height: 1.75;
         letter-spacing: -.02em;
@@ -541,6 +542,7 @@ header .btn-menu{
 
 
     }
+    
 
     .side-nav .sub-item{
         margin-bottom: 16px;
@@ -629,43 +631,74 @@ header .btn-menu{
         height: 10px;
         margin-top: -5px;
         background-color: #d6d7da;
-}
+    }
+    .footer .bottom-area{
+        position: relative;
+        max-width: 980px;
     }
 
-
-
-
-
-
-    /* ---------------------- */
-
-
-    body::-webkit-scrollbar{
-        width: 5px;
-        height: 5px;
-    }
-    body::-webkit-scrollbar-thumb{
-        border-radius: 2.5px;
-    background-color: rgba(0,0,0,.15);
-    }
-    body::-webkit-scrollbar-track{
-        background-color: transparent;
     }
 
-    /* ------------------ */
+@media (max-width:750px) {
 
 
     .footer .category{
-        flex-wrap: wrap;
-    }
-    .footer .cate-info{
-        flex: 1 0 100%;
+        gap: 2px;
     }
 
     .footer .bottom-area{
         flex-direction: column-reverse;
     }
+
     .footer .site-area{
         width: 100%;
     }
+
+    .footer .site-area .btn{
+        width: 100%;
+    }
+
+    .footer .site-area .option{
+        width: 100%;
+    }
+
+    .footer .add-area{
+        width: 100%;
+    }
+
+    
+    .footer .mobile{
+        display: block;
+    }
+
 }
+
+
+@media (max-width:320px) {
+
+    .footer .cate-inner.other{
+        width: 100%;
+    }
+
+}
+
+
+
+.side-nav::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+.side-nav::-webkit-scrollbar-thumb{
+    border-radius: 2.5px;
+    background-color: rgba(0,0,0,.15);
+}
+.side-nav::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+
+.hidden{
+    width: 100%;
+    overflow: hidden;
+}
+
