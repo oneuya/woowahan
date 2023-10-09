@@ -292,28 +292,22 @@
 }
 
 .sc-vision .video-area .btn-play{
-<<<<<<< HEAD
-=======
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
->>>>>>> f834f3e46786d167c9150d5e4140476ad195258a
     display: none;
 }
 
 .sc-vision .video-area .btn-pause{
-<<<<<<< HEAD
-=======
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
->>>>>>> f834f3e46786d167c9150d5e4140476ad195258a
     display: none;
 }
 
